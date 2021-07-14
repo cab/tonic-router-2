@@ -1,0 +1,30 @@
+[package]
+name = "tonic-router-2"
+version = "0.1.0"
+edition = "2018"
+
+[dependencies]
+tonic = "^0.5"
+tower = { version = "0.4.7", features = ["balance", "buffer", "discover", "limit", "load", "make", "timeout", "util"] }
+h2    = { version = "0.3", optional = true }
+hyper = { version = "0.14.2", features = ["full"] }
+http-body = "0.4.2"
+bytes = "1.0"
+dyn-clone = "^1.0"
+http = "0.2"
+futures-util = { version = "0.3", default-features = false }
+futures-core = { version = "0.3", default-features = false }
+tokio = { version = "1.0.1", features = ["net", "macros", "time"] }
+tower-service = "0.3"
+tower-layer = "0.3"
+pin-project = "1.0"
+tracing = "0.1"
+hyper-timeout = { version = "0.4" }
+tokio-stream = "0.1"
+async-stream = "0.3"
+
+
+
+[dev-dependencies]
+tonic-router-2-test-protos = { path = "./tests/protos/" }
+tokio = { version = "^1.0", features = ["full"] }

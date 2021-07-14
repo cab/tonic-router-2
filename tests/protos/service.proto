@@ -1,0 +1,39 @@
+syntax = "proto2";
+
+package echo;
+
+message EchoRequest {
+  optional string message = 1;
+}
+
+message EchoResponse {
+  optional string message = 1;
+}
+
+service Echo {
+  rpc Echo(EchoRequest) returns (EchoResponse) {}
+}
+
+message EchoRequest2 {
+  optional string message = 1;
+}
+
+message EchoResponse2 {
+  optional string message = 1;
+}
+
+service Echo2 {
+  rpc Echo(EchoRequest2) returns (EchoResponse2) {}
+}
+
+message EchoRequest3 {
+  optional string message = 1;
+}
+
+message EchoResponse3 {
+  optional string message = 1;
+}
+
+service Echo3 {
+  rpc Echo(EchoRequest3) returns (EchoResponse3) {}
+}
